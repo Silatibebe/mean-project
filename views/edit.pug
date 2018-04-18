@@ -1,0 +1,27 @@
+extends layout.pug
+block styles
+  style
+   include css/edit.css
+block content
+  br
+  h1 edit   
+  .container-fluid
+    .row
+      .col-md-6
+      
+        form(method="POST", action=`/edit/${user._id}`, name='edit-form')
+              .form-group
+                 label FirstName
+                 input.form-control(type="text", name="firstName", value=user.firstName placeholder="firstname")
+              .form-group
+                 label LastName
+                 input.form-control(type="text", name="lastName", value=user.lastName, placeholder="lastname")
+              .form-group
+                 label Email
+                 input.form-control(type="text", name="email", value=user.email, placeholder="email")
+              .form-group
+                 lable Password 
+                 input.form-control(type="text", name="password", value=user.password, placeholder="password")
+                 button.btn.btn-success(type="submit") Submit
+                 
+

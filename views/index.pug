@@ -1,0 +1,53 @@
+doctype html 
+html
+  head  
+   style
+    include css/icon-bar.css 
+    include css/table.css          
+  title mysite  
+  script(defer="" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css")
+  body    
+   script
+     include js/handler.js 
+     include js/delete_handler.js  
+  .container-fluid
+    .row
+      .icon-bar    
+         a(href="#")
+          i.fab.fa-linkedin-in(onclick="handler()")
+         a(href="#")
+          i.fab.fa-github(onclick="handler()")
+         a(href="#")
+          i.fas.fa-bars(onclick="handler()")    
+    .row       
+     .col-md-6       
+       .well 
+         h1.jumbotron.text-center Projects       
+     .col-md-6
+       .well
+         h1.jumbotron.text-center Customers                    
+         table
+            thead
+              tr
+                th FristName
+                th LastName
+                th Email
+                th Edit
+                th Delete 
+            tbody
+              ul 
+              each user in users
+                tr
+                  td=user.firstName
+                  td=user.lastName
+                  td=user.email
+                  td
+                   a(href=`/edit/${user._id}`) edit
+                  td 
+                   a(href=`/delete_user/${user._id}`) delete  
+    
+   
+   
+     
+     

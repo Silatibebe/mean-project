@@ -1,0 +1,33 @@
+doctype html 
+html
+  head  
+   style
+    include css/registration.css  
+          
+  title mysite  
+  script(defer="" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css")
+  
+  body
+   .container
+     h1.jumbotron.text-center Registration Form
+     .row
+       .col.md-6
+            form(method="POST", action="/registration", name="registration-form")
+              .form-group
+                 label FirstName
+                 input.form-control(type="text", name="firstName", placeholder="firstname")
+              .form-group
+                 label LastName
+                 input.form-control(type="text", name="lastName", placeholder="lastname")
+              .form-group
+                 label Email
+                 input.form-control(type="text", name="email", placeholder="email")
+              .form-group
+                 lable Password 
+                 input.form-control(type="text", name="password", placeholder="password")
+                 button.btn.btn-success(type="submit") Submit
+              
+              
+
+

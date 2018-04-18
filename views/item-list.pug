@@ -1,0 +1,12 @@
+extends layout.pug
+block content  
+  h1 list of items
+  .container-fluid
+    .row
+      .col-md-6
+        h1 user list
+        mixin list(id, ...items)
+         ul(id=id)
+           each item in items 
+             li=item
+        +list('my-list', 1,2,3,4)

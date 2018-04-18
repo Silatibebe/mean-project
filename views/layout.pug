@@ -1,0 +1,23 @@
+doctype html 
+html
+  head
+  block styles
+    style
+     include css/icon-bar.css 
+  title mysite  
+  script(defer="" src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css")
+  body
+  block header
+  .container-fluid
+    .row
+      .icon-bar    
+        a(href="#")
+        i.fab.fa-linkedin-in(onclick="handler()")
+        a(href="#")
+        i.fab.fa-github(onclick="handler()")
+        a(href="#")
+        i.fas.fa-bars(onclick="handler()")        
+  block content
+  block footer
+   p Silatibebe &copy 2018 
